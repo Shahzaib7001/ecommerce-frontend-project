@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Cart</title>
+  <link rel="stylesheet" href="css/cart-style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+<body>
+
+<div id="header"></div>
+
+<div class="cart-container">
+
+    <h2>My cart (3)</h2>
+
+    <div class="cart-wrapper">
+        <!-- Left Side - Cart Items -->
+        <div class="cart-items">
+            
+            <!-- Item -->
+            <div class="cart-item">
+                <img src="images/cart-images/img-group.png" alt="T-shirt">
+                <div class="item-details">
+                    <h4>T-shirts with multiple colors, for men and lady</h4>
+                    <p>Size: medium, Color: blue, Material: Plastic</p>
+                    <p>Seller: Artel Market</p>
+                    <div class="item-actions">
+                        <button class="remove-btn">Remove</button>
+                        <button class="save-btn">Save for later</button>
+                    </div>
+                </div>
+                <div class="item-price">$78.99</div>
+                <div class="item-qty">
+                    <select>
+                        <option>Qty: 9</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Item -->
+            <div class="cart-item">
+                <img src="images/cart-images/img-group (1).png" alt="T-shirt">
+                <div class="item-details">
+                    <h4>T-shirts with multiple colors, for men and lady</h4>
+                    <p>Size: medium, Color: blue, Material: Plastic</p>
+                    <p>Seller: Best factory LLC</p>
+                    <div class="item-actions">
+                        <button class="remove-btn">Remove</button>
+                        <button class="save-btn">Save for later</button>
+                    </div>
+                </div>
+                <div class="item-price">$39.00</div>
+                <div class="item-qty">
+                    <select>
+                        <option>Qty: 3</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Item -->
+            <div class="cart-item">
+                <img src="images/cart-images/img-group (2).png" alt="Lamp">
+                <div class="item-details">
+                    <h4>T-shirts with multiple colors, for men and lady</h4>
+                    <p>Size: medium, Color: blue, Material: Plastic</p>
+                    <p>Seller: Artel Market</p>
+                    <div class="item-actions">
+                        <button class="remove-btn">Remove</button>
+                        <button class="save-btn">Save for later</button>
+                    </div>
+                </div>
+                <div class="item-price">$170.50</div>
+                <div class="item-qty">
+                    <select>
+                        <option>Qty: 1</option>
+                    </select>
+                </div>
+            </div>
+
+            <button class="back-btn">← Back to shop</button>
+            <button class="remove-all-btn">Remove all</button>
+        </div>
+
+        <!-- Right Side - Summary -->
+        <div class="cart-summary">
+            <div class="coupon">
+                <input type="text" placeholder="Add coupon">
+                <button>Apply</button>
+            </div>
+            <div class="summary-details">
+                <p>Subtotal: <span class="red">$1403.97</span></p>
+                <p>Discount: <span class="green">- $60.00</span></p>
+                <p>Tax: <span class="green">+ $14.00</span></p>
+                <hr>
+                <p class="total">Total: <span>$1357.97</span></p>
+                <button class="checkout-btn">Checkout</button>
+                <div class="payment-icons">
+                    <img src="images/cart-images/payment.png" alt="Payment Methods">
+                    <img src="images/cart-images/payment-1.png" alt="Payment Methods">
+                    <img src="images/cart-images/payment-2.png" alt="Payment Methods">
+                    <img src="images/cart-images/payment-3.png" alt="Payment Methods">
+                    <img src="images/cart-images/payment-4.png" alt="Payment Methods">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Saved for later -->
+    <h3>Saved for later</h3>
+    <div class="saved-items">
+        <div class="saved-item">
+            <img src="images/cart-images/img mobile.png" alt="Product">
+            <p class="price">$99.50</p>
+            <p>GoPro HERO6 4K Action Camera - Black</p>
+            <button class="move-btn">Move to cart</button>
+        </div>
+        <div class="saved-item">
+            <img src="images/cart-images/img mobile 2.png" alt="Product">
+            <p class="price">$99.50</p>
+            <p>GoPro HERO6 4K Action Camera - Black</p>
+            <button class="move-btn">Move to cart</button>
+        </div>
+        <div class="saved-item">
+            <img src="images/cart-images/watch.png" alt="Product">
+            <p class="price">$99.50</p>
+            <p>GoPro HERO6 4K Action Camera - Black</p>
+            <button class="move-btn">Move to cart</button>
+        </div>
+        <div class="saved-item">
+            <img src="images/cart-images/laptop.png" alt="Product">
+            <p class="price">$99.50</p>
+            <p>GoPro HERO6 4K Action Camera - Black</p>
+            <button class="move-btn">Move to cart</button>
+        </div>
+    </div>
+
+    <!-- Discount Banner -->
+    <div class="discount-banner">
+        <p>Super discount on more than 100 USD <span>Have you ever finally just write dummy info</span></p>
+        <button>Shop now</button>
+    </div>
+
+</div>
+
+<div id="footer"></div>
+
+<script>
+  fetch("header.html").then(r => r.text()).then(d => document.getElementById("header").innerHTML = d);
+  fetch("footer.html").then(r => r.text()).then(d => document.getElementById("footer").innerHTML = d);
+</script>
+
+</body>
+</html>

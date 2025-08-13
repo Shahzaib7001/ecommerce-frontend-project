@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>List View</title>
+  <link rel="stylesheet" href="css/listview-style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+<body>
+
+<div id="header"></div>
+
+<section class="product-page">
+  <!-- Breadcrumb -->
+  <div class="breadcrumb">
+    <a href="#">Home</a> > <a href="#">Clothings</a> > <a href="#">Men's wear</a> > Summer clothing
+  </div>
+
+  <div class="main-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <!-- Category -->
+      <div class="filter-block">
+        <h3>Category</h3>
+        <ul>
+          <li><a href="#">Mobile accessory</a></li>
+          <li><a href="#">Electronics</a></li>
+          <li><a href="#">Smartphones</a></li>
+          <li><a href="#">Modern tech</a></li>
+          <li><a href="#">See all</a></li>
+        </ul>
+      </div>
+
+      <!-- Brands -->
+      <div class="filter-block">
+        <h3>Brands</h3>
+        <label><input type="checkbox"> Samsung</label>
+        <label><input type="checkbox"> Apple</label>
+        <label><input type="checkbox"> Huawei</label>
+        <label><input type="checkbox"> Poco</label>
+        <label><input type="checkbox"> Lenovo</label>
+      </div>
+
+      <!-- Features -->
+      <div class="filter-block">
+        <h3>Features</h3>
+        <label><input type="checkbox"> Metallic</label>
+        <label><input type="checkbox"> Plastic cover</label>
+        <label><input type="checkbox"> 8GB Ram</label>
+        <label><input type="checkbox"> Super power</label>
+        <label><input type="checkbox"> Large Memory</label>
+        <a href="#">See all</a>
+      </div>
+
+      <!-- Price range -->
+      <div class="filter-block">
+        <h3>Price range</h3>
+        <input type="range" min="0" max="999999">
+        <div class="price-inputs">
+          <input type="number" placeholder="Min">
+          <input type="number" placeholder="Max">
+        </div>
+        <button class="apply-btn">Apply</button>
+      </div>
+
+      <!-- Condition -->
+      <div class="filter-block">
+        <h3>Condition</h3>
+        <label><input type="radio" name="condition" checked> Any</label>
+        <label><input type="radio" name="condition"> Refurbished</label>
+        <label><input type="radio" name="condition"> Brand new</label>
+        <label><input type="radio" name="condition"> Old Items</label>
+      </div>
+
+      <!-- Ratings -->
+      <div class="filter-block">
+        <h3>Ratings</h3>
+        <label>⭐⭐⭐⭐⭐</label>
+        <label>⭐⭐⭐⭐</label>
+        <label>⭐⭐⭐</label>
+        <label>⭐⭐</label>
+        <label>⭐</label>
+      </div>
+    </aside>
+
+    <!-- Products Section -->
+    <div class="products-section">
+      <!-- Filter Bar -->
+      <div class="filter-bar">
+        <span>12,911 items in <b>Mobile accessory</b></span>
+        <label><input type="checkbox"> Verified only</label>
+        <select>
+          <option>Featured</option>
+        </select>
+        <button class="view-btn">☷</button>
+        <button class="view-btn active">▤</button>
+      </div>
+
+      <!-- Product List -->
+      <div class="product-list">
+        <!-- Product Item -->
+        <div class="product-item">
+          <img src="https://via.placeholder.com/140x140" alt="Product">
+          <div class="product-details">
+            <h2>Canon Camera EOS 2000, Black 10x zoom</h2>
+            <div class="price">
+              <span class="new-price">$998.00</span>
+              <span class="old-price">$1128.00</span>
+            </div>
+            <div class="meta">
+              <span class="rating">⭐⭐⭐⭐⭐ 7.5</span>
+              <span class="orders">• 154 orders</span>
+              <span class="shipping">• Free Shipping</span>
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
+            <a href="#" class="view-link">View details</a>
+          </div>
+          <button class="wishlist">♡</button>
+        </div>
+
+        <!-- Repeat other products here -->
+      </div>
+
+      <!-- Pagination -->
+      <div class="pagination">
+        <label>Show <select><option>10</option></select></label>
+        <div class="pages">
+          <a href="#">1</a>
+          <a href="#">2</a>
+          <a href="#">3</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<div id="footer"></div>
+
+<script>
+  fetch("header.html").then(r => r.text()).then(d => document.getElementById("header").innerHTML = d);
+  fetch("footer.html").then(r => r.text()).then(d => document.getElementById("footer").innerHTML = d);
+</script>
+
+</body>
+</html>
