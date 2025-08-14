@@ -23,7 +23,7 @@
         <i class="fas fa-comment-dots"></i>
         <span>Message</span>
       </div>
-      <div class="icon">
+      <div class="icon  id="cartIcon"">
         <i class="fas fa-heart"></i>
         <span>Orders</span>
       </div>
@@ -66,3 +66,21 @@
     </div>
   </div>
 </nav>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const cartIcon = document.getElementById("cartIcon");
+    if (cartIcon) {
+      cartIcon.style.cursor = "pointer"; // Show hand pointer
+      cartIcon.addEventListener("click", function () {
+        window.location.href = "web-cart.html";
+      });
+    }
+  });
+</script>
+
+
+
+
+
+
