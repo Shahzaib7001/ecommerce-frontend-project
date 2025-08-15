@@ -11,15 +11,16 @@
 
 <div id="header"></div>
 
+
 <section class="product-page">
   <!-- Breadcrumb -->
   <div class="breadcrumb">
-    <a href="#">Home</a> > <a href="#">Clothings</a> > <a href="#">Men's wear</a> > Summer clothing
+    <a href="#">Home</a> > <a href="#">Electronics</a> > <a href="#">Mobile accessories</a> > Cameras
   </div>
 
   <div class="main-container">
     <!-- Sidebar -->
-    <aside class="sidebar">
+    <aside class="sidebar" aria-label="Filters">
       <!-- Category -->
       <div class="filter-block">
         <h3>Category</h3>
@@ -56,12 +57,12 @@
       <!-- Price range -->
       <div class="filter-block">
         <h3>Price range</h3>
-        <input type="range" min="0" max="999999">
+        <input type="range" min="0" max="2000" value="998" aria-label="Price range">
         <div class="price-inputs">
-          <input type="number" placeholder="Min">
-          <input type="number" placeholder="Max">
+          <input type="number" placeholder="Min" aria-label="Minimum price">
+          <input type="number" placeholder="Max" aria-label="Maximum price">
         </div>
-        <button class="apply-btn">Apply</button>
+        <button class="apply-btn" type="button">Apply</button>
       </div>
 
       <!-- Condition -->
@@ -76,11 +77,11 @@
       <!-- Ratings -->
       <div class="filter-block">
         <h3>Ratings</h3>
-        <label>⭐⭐⭐⭐⭐</label>
-        <label>⭐⭐⭐⭐</label>
-        <label>⭐⭐⭐</label>
-        <label>⭐⭐</label>
-        <label>⭐</label>
+        <label><input type="radio" name="rating"> ⭐⭐⭐⭐⭐</label>
+        <label><input type="radio" name="rating"> ⭐⭐⭐⭐</label>
+        <label><input type="radio" name="rating"> ⭐⭐⭐</label>
+        <label><input type="radio" name="rating"> ⭐⭐</label>
+        <label><input type="radio" name="rating"> ⭐</label>
       </div>
     </aside>
 
@@ -89,19 +90,36 @@
       <!-- Filter Bar -->
       <div class="filter-bar">
         <span>12,911 items in <b>Mobile accessory</b></span>
-        <label><input type="checkbox"> Verified only</label>
-        <select>
-          <option>Featured</option>
-        </select>
-        <button class="view-btn">☷</button>
-        <button class="view-btn active">▤</button>
+        <label class="verified-only"><input type="checkbox"> Verified only</label>
+        <label class="ship-to">
+          Ship to
+          <select aria-label="Ship to">
+            <option>Pakistan</option>
+            <option>UAE</option>
+            <option>USA</option>
+            <option>UK</option>
+          </select>
+        </label>
+        <label class="sort-by">
+          Sort by
+          <select aria-label="Sort by">
+            <option>Featured</option>
+            <option>Price: Low to High</option>
+            <option>Price: High to Low</option>
+            <option>Top rated</option>
+          </select>
+        </label>
+        <div class="view-toggle" role="group" aria-label="View options">
+          <button class="view-btn" title="Grid view">☷</button>
+          <button class="view-btn active" title="List view">▤</button>
+        </div>
       </div>
 
-      <!-- Product List -->
+      <!-- Product List (List view) -->
       <div class="product-list">
-        <!-- Product Item -->
+        <!-- Product 1 -->
         <div class="product-item">
-          <img src="https://via.placeholder.com/140x140" alt="Product">
+          <img src="images/web-detail-images/Canon Camera.png" alt="Canon Camera EOS 2000">
           <div class="product-details">
             <h2>Canon Camera EOS 2000, Black 10x zoom</h2>
             <div class="price">
@@ -113,27 +131,130 @@
               <span class="orders">• 154 orders</span>
               <span class="shipping">• Free Shipping</span>
             </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
+            <p>Capture life in sharp detail with a versatile 10x zoom—reliable autofocus and crisp low‑light performance.</p>
             <a href="#" class="view-link">View details</a>
           </div>
-          <button class="wishlist">♡</button>
+          <button class="wishlist" aria-label="Add to wishlist">♡</button>
         </div>
 
-        <!-- Repeat other products here -->
+        <!-- Product 2 -->
+        <div class="product-item">
+          <img src="images/web-detail-images/GoPro.png" alt="GoPro HERO6 4K Action Camera - Black">
+          <div class="product-details">
+            <h2>GoPro HERO6 4K Action Camera - Black</h2>
+            <div class="price">
+              <span class="new-price">$998.00</span>
+            </div>
+            <div class="meta">
+              <span class="rating">⭐⭐⭐⭐⭐ 7.5</span>
+              <span class="orders">• 102 orders</span>
+              <span class="shipping">• Free Shipping</span>
+            </div>
+            <p>Stabilized 4K footage, rugged waterproof build, and intuitive controls for adventures anywhere.</p>
+            <a href="#" class="view-link">View details</a>
+          </div>
+          <button class="wishlist" aria-label="Add to wishlist">♡</button>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product-item">
+          <img src="images/web-detail-images/GeoPro2.png" alt="GoPro HERO6 4K Action Camera - Black">
+          <div class="product-details">
+            <h2>GoPro HERO6 4K Action Camera - Black</h2>
+            <div class="price">
+              <span class="new-price">$998.00</span>
+            </div>
+            <div class="meta">
+              <span class="rating">⭐⭐⭐⭐⭐ 7.5</span>
+              <span class="orders">• 89 orders</span>
+              <span class="shipping">• Free Shipping</span>
+            </div>
+            <p>Ultra‑smooth video, voice control, and quick transfers make sharing your moments effortless.</p>
+            <a href="#" class="view-link">View details</a>
+          </div>
+          <button class="wishlist" aria-label="Add to wishlist">♡</button>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product-item">
+          <img src="images/web-detail-images/Watch.png" alt="GoPro HERO6 4K Action Camera - Black">
+          <div class="product-details">
+            <h2>GoPro HERO6 4K Action Camera - Black</h2>
+            <div class="price">
+              <span class="new-price">$998.00</span>
+            </div>
+            <div class="meta">
+              <span class="rating">⭐⭐⭐⭐⭐ 7.5</span>
+              <span class="orders">• 76 orders</span>
+              <span class="shipping">• Free Shipping</span>
+            </div>
+            <p>Capture fast action with stunning clarity, designed for durability and performance.</p>
+            <a href="#" class="view-link">View details</a>
+          </div>
+          <button class="wishlist" aria-label="Add to wishlist">♡</button>
+        </div>
+
+        <!-- Product 5 (with old price) -->
+        <div class="product-item">
+          <img src="images/web-detail-images/laptop.png" alt="GoPro HERO6 4K Action Camera - Black">
+          <div class="product-details">
+            <h2>GoPro HERO6 4K Action Camera - Black</h2>
+            <div class="price">
+              <span class="new-price">$998.00</span>
+              <span class="old-price">$1128.00</span>
+            </div>
+            <div class="meta">
+              <span class="rating">⭐⭐⭐⭐⭐ 7.5</span>
+              <span class="orders">• 211 orders</span>
+              <span class="shipping">• Free Shipping</span>
+            </div>
+            <p>High‑frame‑rate 4K with advanced stabilization for pro‑level results in a compact form.</p>
+            <a href="#" class="view-link">View details</a>
+          </div>
+          <button class="wishlist" aria-label="Add to wishlist">♡</button>
+        </div>
+
+        <!-- Product 6 -->
+        <div class="product-item">
+          <img src="images/web-detail-images/head.png" alt="GoPro HERO6 4K Action Camera - Black">
+          <div class="product-details">
+            <h2>GoPro HERO6 4K Action Camera - Black</h2>
+            <div class="price">
+              <span class="new-price">$998.00</span>
+            </div>
+            <div class="meta">
+              <span class="rating">⭐⭐⭐⭐⭐ 7.5</span>
+              <span class="orders">• 63 orders</span>
+              <span class="shipping">• Free Shipping</span>
+            </div>
+            <p>Seamless connectivity and robust design—ready for every trip, trail, and tide.</p>
+            <a href="#" class="view-link">View details</a>
+          </div>
+          <button class="wishlist" aria-label="Add to wishlist">♡</button>
+        </div>
       </div>
 
       <!-- Pagination -->
-      <div class="pagination">
-        <label>Show <select><option>10</option></select></label>
+      <div class="pagination" role="navigation" aria-label="Pagination">
+        <label>Show
+          <select aria-label="Items per page">
+            <option>10</option>
+            <option>20</option>
+            <option>50</option>
+          </select>
+        </label>
         <div class="pages">
-          <a href="#">1</a>
+          <a href="#" aria-current="page">1</a>
           <a href="#">2</a>
           <a href="#">3</a>
+          <a href="#">Next ›</a>
         </div>
       </div>
     </div>
   </div>
 </section>
+
+
 
 
 

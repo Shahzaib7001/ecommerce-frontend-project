@@ -3,154 +3,260 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Grid View</title>
+  <title>Mobile Accessories - Grid View</title>
   <link rel="stylesheet" href="css/gridview.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
 </head>
 <body>
 
-<div id="header"></div>
+  <!-- Header (loaded via JS) -->
+  <div id="header"></div>
 
+  <section class="product-page">
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="#">Home</a> > <a href="#">Electronics</a> > Mobile accessories
+    </nav>
 
-<section class="product-page">
-  <!-- Breadcrumb -->
-  <div class="breadcrumb">
-    <a href="#">Home</a> > <a href="#">Clothings</a> > <a href="#">Men's wear</a> > Summer clothing
-  </div>
+    <div class="main-container">
+      <!-- Sidebar -->
+      <aside class="sidebar" aria-label="Filters">
+        <!-- Category -->
+        <div class="filter-block">
+          <h3>Category</h3>
+          <ul>
+            <li><a href="#">Mobile accessory</a></li>
+            <li><a href="#">Electronics</a></li>
+            <li><a href="#">Smartphones</a></li>
+            <li><a href="#">Modern tech</a></li>
+            <li><a href="#">See all</a></li>
+          </ul>
+        </div>
 
-  <div class="main-container">
-    <!-- Sidebar -->
-    <aside class="sidebar">
-      <!-- Category -->
-      <div class="filter-block">
-        <h3>Category</h3>
-        <ul>
-          <li><a href="#">Mobile accessory</a></li>
-          <li><a href="#">Electronics</a></li>
-          <li><a href="#">Smartphones</a></li>
-          <li><a href="#">Modern tech</a></li>
-          <li><a href="#">See all</a></li>
-        </ul>
-      </div>
+        <!-- Brands -->
+        <div class="filter-block">
+          <h3>Brands</h3>
+          <label><input type="checkbox" checked /> Samsung</label>
+          <label><input type="checkbox" checked /> Apple</label>
+          <label><input type="checkbox" /> Huawei</label>
+          <label><input type="checkbox" checked /> Poco</label>
+          <label><input type="checkbox" /> Lenovo</label>
+        </div>
 
-      <!-- Brands -->
-      <div class="filter-block">
-        <h3>Brands</h3>
-        <label><input type="checkbox" checked> Samsung</label>
-        <label><input type="checkbox" checked> Apple</label>
-        <label><input type="checkbox"> Huawei</label>
-        <label><input type="checkbox" checked> Poco</label>
-        <label><input type="checkbox"> Lenovo</label>
-      </div>
+        <!-- Features -->
+        <div class="filter-block">
+          <h3>Features</h3>
+          <label><input type="checkbox" checked /> Metallic</label>
+          <label><input type="checkbox" /> Plastic cover</label>
+          <label><input type="checkbox" /> 8GB Ram</label>
+          <label><input type="checkbox" /> Super power</label>
+          <label><input type="checkbox" /> Large memory</label>
+          <a class="see-all" href="#">See all</a>
+        </div>
 
-      <!-- Features -->
-      <div class="filter-block">
-        <h3>Features</h3>
-        <label><input type="checkbox" checked> Metallic</label>
-        <label><input type="checkbox"> Plastic cover</label>
-        <label><input type="checkbox"> 8GB Ram</label>
-        <label><input type="checkbox"> Super power</label>
-        <label><input type="checkbox"> Large Memory</label>
-        <a href="#">See all</a>
-      </div>
-
-      <!-- Price range -->
-      <div class="filter-block">
-        <h3>Price range</h3>
-      </div>
-
-      <!-- Condition -->
-      <div class="filter-block">
-        <h3>Condition</h3>
-      </div>
-
-      <!-- Ratings -->
-      <div class="filter-block">
-        <h3>Ratings</h3>
-      </div>
-
-      <!-- Manufacturer -->
-      <div class="filter-block">
-        <h3>Manufacturer</h3>
-      </div>
-    </aside>
-
-    <!-- Products -->
-    <div class="products-section">
-      <!-- Filter Bar -->
-      <div class="filter-bar">
-        <span>12,911 items in <b>Mobile accessory</b></span>
-        <label><input type="checkbox"> Verified only</label>
-        <select>
-          <option>Featured</option>
-        </select>
-        <button class="view-btn">☷</button>
-        <button class="view-btn">▤</button>
-      </div>
-
-      <!-- Active filters -->
-      <div class="active-filters">
-        <span>Samsung ✕</span>
-        <span>Apple ✕</span>
-        <span>Poco ✕</span>
-        <span>Metallic ✕</span>
-        <span>4 star ✕</span>
-        <span>3 star ✕</span>
-        <a href="#">Clear all filter</a>
-      </div>
-
-      <!-- Product Grid -->
-      <div class="product-grid">
-        <!-- Repeat product card -->
-        <div class="product-card">
-          <img src="https://via.placeholder.com/200x200" alt="Product">
-          <div class="product-info">
-            <div class="price">
-              <span class="new-price">$99.50</span>
-              <span class="old-price">$128.00</span>
-            </div>
-            <div class="rating">⭐ 7.5</div>
-            <p>GoPro HERO6 4K Action Camera - Black</p>
+        <!-- Price range -->
+        <div class="filter-block">
+          <h3>Price range</h3>
+          <div class="price-range">
+            <input type="number" placeholder="Min" aria-label="Min price" />
+            <span class="dash">—</span>
+            <input type="number" placeholder="Max" aria-label="Max price" >
+            <!-- <button class="btn-apply" type="button">Apply</button> -->
           </div>
         </div>
 
-        <div class="product-card">
-          <img src="https://via.placeholder.com/200x200" alt="Product">
-          <div class="product-info">
-            <div class="price">
-              <span class="new-price">$99.50</span>
-              <span class="old-price">$128.00</span>
-            </div>
-            <div class="rating">⭐ 5.9</div>
-            <p>GoPro HERO6 4K Action Camera - Black</p>
+        <!-- Condition -->
+        <div class="filter-block">
+          <h3>Condition</h3>
+          <label><input type="checkbox" /> Brand new</label>
+          <label><input type="checkbox" /> Used</label>
+          <label><input type="checkbox" /> Refurbished</label>
+        </div>
+
+        <!-- Ratings -->
+        <div class="filter-block">
+          <h3>Ratings</h3>
+          <label><input type="checkbox" checked /> 4 star</label>
+          <label><input type="checkbox" checked /> 3 star</label>
+          <label><input type="checkbox" /> 2 star</label>
+          <label><input type="checkbox" /> 1 star</label>
+        </div>
+
+        <!-- Manufacturer -->
+        <div class="filter-block">
+          <h3>Manufacturer</h3>
+          <label><input type="checkbox" /> Global brands</label>
+          <label><input type="checkbox" /> Local brands</label>
+          <label><input type="checkbox" /> OEM</label>
+        </div>
+      </aside>
+
+      <!-- Products -->
+      <div class="products-section">
+        <!-- Filter Bar -->
+        <div class="filter-bar">
+          <span>12,911 items in <b>Mobile accessory</b></span>
+          <label class="verified"><input type="checkbox" /> Verified only</label>
+          <label class="ship"><input type="checkbox" /> Fast shipping</label>
+          <select aria-label="Sort by">
+            <option>Featured</option>
+            <option>Price: Low to High</option>
+            <option>Price: High to Low</option>
+            <option>Rating</option>
+            <option>Newest</option>
+          </select>
+          <div class="view-toggle" role="group" aria-label="View toggle">
+            <button class="view-btn" title="List view">☷</button>
+            <button class="view-btn active" title="Grid view">▤</button>
           </div>
         </div>
 
-        <!-- Add more cards here -->
-      </div>
+        <!-- Active filters -->
+        <div class="active-filters">
+          <span class="chip">Samsung ✕</span>
+          <span class="chip">Apple ✕</span>
+          <span class="chip">Poco ✕</span>
+          <span class="chip">Metallic ✕</span>
+          <span class="chip">4 star ✕</span>
+          <span class="chip">3 star ✕</span>
+          <a class="clear-filters" href="#">Clear all filter</a>
+        </div>
 
-      <!-- Pagination -->
-      <div class="pagination">
-        <label>Show <select><option>10</option></select></label>
-        <div class="pages">
-          <a href="#">1</a>
-          <a href="#">2</a>
-          <a href="#">3</a>
+       <!-- Product Grid (3x3 layout) -->
+<div class="product-grid">
+  <article class="product-card">
+    <img src="images/web-detail-images/Canon Camera.png" alt="Canon Camera" />
+    <div class="product-info">
+      <div class="price">
+        <span class="new-price">$99.50</span>
+        <span class="old-price">$128.00</span>
+      </div>
+      <div class="rating">⭐ 7.5</div>
+      <p class="title">Canon Camera</p>
+    </div>
+  </article>
+
+  <article class="product-card">
+    <img src="images/web-detail-images/GoPro1.png" alt="Blue Smartphone" />
+    <div class="product-info">
+      <div class="price">
+        <span class="new-price">$99.50</span>
+        <span class="old-price">$128.00</span>
+      </div>
+      <div class="rating">⭐ 5.9</div>
+      <p class="title">Blue Smartphone - Metallic</p>
+    </div>
+  </article>
+
+  <article class="product-card">
+    <img src="images/web-detail-images/GoPro.png" alt="Black Smartphone" />
+    <div class="product-info">
+      <div class="price">
+        <span class="new-price">$99.50</span>
+      </div>
+      <div class="rating">⭐ 7.5</div>
+      <p class="title">Black Smartphone</p>
+    </div>
+  </article>
+
+  <article class="product-card">
+    <img src="images/web-detail-images/GeoPro2.png" alt="Black Tablet" />
+    <div class="product-info">
+      <div class="price">
+        <span class="new-price">$99.50</span>
+        <span class="old-price">$128.00</span>
+      </div>
+      <div class="rating">⭐ 7.5</div>
+      <p class="title">Black Tablet</p>
+    </div>
+  </article>
+
+  <article class="product-card">
+    <img src="images/web-detail-images/Camera.png" alt="Blue Smartphone" />
+    <div class="product-info">
+      <div class="price">
+        <span class="new-price">$99.50</span>
+        <span class="old-price">$128.00</span>
+      </div>
+      <div class="rating">⭐ 7.5</div>
+      <p class="title">Blue Smartphone</p>
+    </div>
+  </article>
+
+  <article class="product-card">
+    <img src="images/web-detail-images/GoPro.png" alt="Laptop" />
+    <div class="product-info">
+      <div class="price">
+        <span class="new-price">$99.50</span>
+        <span class="old-price">$128.00</span>
+      </div>
+      <div class="rating">⭐ 7.5</div>
+      <p class="title">Laptop</p>
+    </div>
+  </article>
+
+  <article class="product-card">
+    <img src="images/Deal and offer images/laptop.png" alt="Smartwatch" />
+    <div class="product-info">
+      <div class="price">
+        <span class="new-price">$99.50</span>
+        <span class="old-price">$128.00</span>
+      </div>
+      <div class="rating">⭐ 7.5</div>
+      <p class="title">Smartwatch</p>
+    </div>
+  </article>
+
+  <article class="product-card">
+    <img src="images/Deal and offer images/sm-watch.png" alt="Red Smartphone" />
+    <div class="product-info">
+      <div class="price">
+        <span class="new-price">$99.50</span>
+        <span class="old-price">$128.00</span>
+      </div>
+      <div class="rating">⭐ 7.5</div>
+      <p class="title">Red Smartphone</p>
+    </div>
+  </article>
+
+  <article class="product-card">
+    <img src="images/web-detail-images/Canon Camera.png" alt="Red Smartphone" />
+    <div class="product-info">
+      <div class="price">
+        <span class="new-price">$99.50</span>
+        <span class="old-price">$128.00</span>
+      </div>
+      <div class="rating">⭐ 7.5</div>
+      <p class="title">Red Smartphone - Metallic</p>
+    </div>
+  </article>
+</div>
+        <!-- Pagination -->
+        <div class="pagination">
+          <label>Show
+            <select aria-label="Items per page">
+              <option>10</option>
+              <option>20</option>
+              <option>30</option>
+            </select>
+          </label>
+          <div class="pages" role="navigation" aria-label="Pagination">
+            <a href="#" class="active">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-
-
-
-<div id="footer"></div>
-
-<script>
+  <!-- Footer (loaded via JS) -->
+  <div id="footer"></div>
+  <script>
   fetch("header.html").then(r => r.text()).then(d => document.getElementById("header").innerHTML = d);
   fetch("footer.html").then(r => r.text()).then(d => document.getElementById("footer").innerHTML = d);
 </script>
 
+  
 </body>
 </html>

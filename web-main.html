@@ -83,27 +83,27 @@
 
       <!-- Right side: product cards -->
       <div class="deals-items">
-        <div class="deal-card">
+        <div class="deal-card  clickable-product"  >
           <img src="images/Deal and offer images/sm-watch.png" alt="Smart watches">
           <p>Smart watches</p>
           <span class="discount">-25%</span>
         </div>
-        <div class="deal-card">
+        <div class="deal-card  clickable-product">
           <img src="images/Deal and offer images/laptop.png" alt="Laptops">
           <p>Laptops</p>
           <span class="discount">-15%</span>
         </div>
-        <div class="deal-card">
+        <div class="deal-card clickable-product">
           <img src="images/Deal and offer images/camera.png" alt="GoPro cameras">
           <p>GoPro cameras</p>
           <span class="discount">-40%</span>
         </div>
-        <div class="deal-card">
+        <div class="deal-card clickable-product">
           <img src="images/Deal and offer images/headphone.png" alt="Headphones">
           <p>Headphones</p>
           <span class="discount">-25%</span>
         </div>
-        <div class="deal-card">
+        <div class="deal-card clickable-product">
           <img src="images/Deal and offer images/canon.png" alt="Canon cameras">
           <p>Canon cameras</p>
           <span class="discount">-25%</span>
@@ -544,6 +544,38 @@ function startCountdown(days, hours, mins, secs) {
 // Example start: 4 days 13 hours 34 mins 56 secs
 startCountdown(4, 13, 34, 56);
    
+
+   document.addEventListener("DOMContentLoaded", function() {
+  document.querySelectorAll(".clickable-product").forEach(function(item) {
+    item.addEventListener("click", function() {
+      window.location.href = "web-gridview.html";
+    });
+  });
+});
+
+
+
+
+
+</script>
+
+<script>
+  fetch("header.html")
+    .then(res => res.text())
+    .then(html => {
+      const header = document.getElementById("header");
+      header.innerHTML = html;
+
+      // Find the "My cart" icon and bind click
+      const cartIconEl = header.querySelector(".header-icons .icon i.fa-shopping-cart");
+      if (cartIconEl) {
+        const cartBox = cartIconEl.closest(".icon");
+        cartBox.style.cursor = "pointer";
+        cartBox.addEventListener("click", () => {
+          window.location.href = "web-cart.html"; // <-- your target page
+        });
+      }
+    });
 </script>
 
 </body>
