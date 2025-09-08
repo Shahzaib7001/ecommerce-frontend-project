@@ -84,23 +84,23 @@ display: flex;
 .header-icons {
   display: flex;
   gap: 20px;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .header-icons .icon {
   display: flex;
-  flex-direction: column; /* forces vertical stack */
+  flex-direction: column;
   align-items: center;
-  font-size: 14px;
+  font-size: 12px;
   color: #8b96a5;
-  text-align: center;
+  cursor: pointer;
 }
 
-.header-icons .icon i {
+.header-icons i {
   font-size: 18px;
-  margin-bottom: 5px;
-  color: #8b96a5;
+  margin-bottom: 2px;
 }
-
 
 
 /* Bottom Navigation */
@@ -998,3 +998,233 @@ img {
     gap: 10px;
   }
 }
+
+
+
+/* ============================= */
+/* 📱 Mobile Responsive Styling  */
+/* ============================= */
+@media (max-width: 991px) {
+  /* Product Section */
+  .product-container {
+    grid-template-columns: 1fr; /* stack images, info, seller */
+  }
+  .product-images {
+    margin-bottom: 15px;
+  }
+  .thumbnail-row {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .product-info {
+    order: 2;
+  }
+  .seller-card {
+    order: 3;
+    margin-top: 15px;
+  }
+
+  /* Tabs Layout */
+  .tabs-layout {
+    grid-template-columns: 1fr; /* stack description + recommendations */
+  }
+  .recommendations {
+    margin-top: 20px;
+  }
+
+  /* Related Products */
+  .products-row.six-cols {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .products-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Discount Banner */
+  .discount-banner {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+    padding: 20px;
+  }
+  .discount-banner h2 {
+    font-size: 18px;
+  }
+  .discount-cta {
+    width: 100%;
+    max-width: 250px;
+  }
+}
+
+@media (max-width: 576px) {
+  /* Product Images */
+  .thumbnail-row img {
+    width: 48px;
+    height: 48px;
+  }
+
+  /* Product Info */
+  .product-info .product-title {
+    font-size: 18px;
+  }
+  .rating-row {
+    font-size: 12px;
+    gap: 4px;
+  }
+  .price-table {
+    flex-direction: column;
+  }
+  .price-card {
+    width: 100%;
+  }
+
+  /* Related Products */
+  .products-row,
+  .products-row.six-cols {
+    grid-template-columns: 1fr;
+  }
+
+  /* Tabs */
+  .tab-button {
+    flex: 1;
+    font-size: 12px;
+    padding: 6px;
+  }
+}
+
+
+
+/* 📱 Mobile & Tablet Responsive Header */
+
+/* Tablet and below */
+@media (max-width: 992px) {
+  .top-header-content {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  .search-bar {
+    flex: 1 1 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .search-bar input,
+  .search-bar select,
+  .search-bar button {
+    flex: 1 1 auto;
+    min-width: 100px;
+  }
+
+  .header-icons {
+    display: flex;
+    justify-content: flex-end;
+    flex: 1 1 100%;
+    gap: 15px;
+  }
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+  /* Top header stack */
+  .top-header-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .logo {
+    margin-bottom: 10px;
+  }
+
+  .search-bar {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .search-bar input,
+  .search-bar select,
+  .search-bar button {
+    width: 100%;
+  }
+
+  .header-icons {
+    width: 100%;
+    justify-content: space-around;
+    margin-top: 10px;
+  }
+
+  /* Nav links wrap or stack */
+  .nav-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 8px;
+    margin: 10px 0;
+  }
+
+  .nav-links li {
+    width: 100%;
+  }
+
+  .lang-ship {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .ship-to {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 576px) {
+  .header-icons {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .nav-links {
+    font-size: 14px;
+  }
+
+  .search-bar input {
+    font-size: 14px;
+  }
+}
+
+
+
+/* 📱 Mobile & Tablet Responsive Footer */
+
+/* Tablet view */
+@media (max-width: 992px) {
+  .footer-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .app-download img {
+    max-width: 140px;
+  }
+}
+
+
+
+
+
+
+

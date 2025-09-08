@@ -84,22 +84,29 @@ display: flex;
 .header-icons {
   display: flex;
   gap: 20px;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .header-icons .icon {
   display: flex;
-  flex-direction: column; /* forces vertical stack */
+  flex-direction: column;
   align-items: center;
-  font-size: 14px;
+  font-size: 12px;
   color: #8b96a5;
-  text-align: center;
+  cursor: pointer;
 }
 
-.header-icons .icon i {
+.header-icons i {
   font-size: 18px;
-  margin-bottom: 5px;
-  color: #8b96a5;
+  margin-bottom: 2px;
 }
+
+
+
+
+
+
 
 
 
@@ -591,6 +598,30 @@ display: flex;
   }
   .pages a:hover{ border-color: var(--primary); }
 
+
+
+
+  /* Grid view layout */
+.product-list.grid-view {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.product-list.grid-view .product-item {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.product-list.grid-view .product-item img {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+}
+
+
+
   /* Responsive */
   @media (max-width: 1024px){
     .product-page{ padding: 16px; }
@@ -611,3 +642,221 @@ display: flex;
     .meta{ font-size: 13px; }
     .breadcrumb{ font-size: 13px; }
   }
+
+
+
+
+
+  /* Extra Mobile Optimization */
+@media (max-width: 480px) {
+  /* Breadcrumb wraps nicely */
+  .breadcrumb {
+    font-size: 12px;
+    line-height: 1.4;
+    word-break: break-word;
+  }
+
+  /* Filter bar stacked layout */
+  .filter-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .filter-bar > span {
+    font-size: 13px;
+  }
+
+  .filter-bar label,
+  .filter-bar select {
+    font-size: 13px;
+    width: 100%;  /* full width for selects */
+  }
+
+  /* Product item tweaks */
+  .product-item {
+    flex-direction: column;  /* stack image on top */
+    align-items: center;
+    text-align: center;
+  }
+
+  .product-item img {
+    width: 100%;
+    max-width: 220px;
+    height: auto;
+  }
+
+  .product-details {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .product-details h2 {
+    font-size: 15px;
+  }
+
+  .product-details p {
+    font-size: 13px;
+  }
+
+  .wishlist {
+    top: 8px;
+    right: 8px;
+  }
+
+  /* Pagination center */
+  .pagination {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .pages {
+    text-align: center;
+  }
+
+  /* Sidebar filter on small screens */
+  .sidebar {
+    width: 100%;
+    padding: 12px;
+  }
+  .filter-block h3 {
+    font-size: 14px;
+  }
+  .filter-block label {
+    font-size: 13px;
+  }
+}
+
+
+/* 📱 Mobile & Tablet Responsive Header */
+
+/* Tablet and below */
+@media (max-width: 992px) {
+  .top-header-content {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  .search-bar {
+    flex: 1 1 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .search-bar input,
+  .search-bar select,
+  .search-bar button {
+    flex: 1 1 auto;
+    min-width: 100px;
+  }
+
+  .header-icons {
+    display: flex;
+    justify-content: flex-end;
+    flex: 1 1 100%;
+    gap: 15px;
+  }
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+  /* Top header stack */
+  .top-header-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .logo {
+    margin-bottom: 10px;
+  }
+
+  .search-bar {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .search-bar input,
+  .search-bar select,
+  .search-bar button {
+    width: 100%;
+  }
+
+  .header-icons {
+    width: 100%;
+    justify-content: space-around;
+    margin-top: 10px;
+  }
+
+  /* Nav links wrap or stack */
+  .nav-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 8px;
+    margin: 10px 0;
+  }
+
+  .nav-links li {
+    width: 100%;
+  }
+
+  .lang-ship {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .ship-to {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 576px) {
+  .header-icons {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .nav-links {
+    font-size: 14px;
+  }
+
+  .search-bar input {
+    font-size: 14px;
+  }
+}
+
+
+
+/* 📱 Mobile & Tablet Responsive Footer */
+
+/* Tablet view */
+@media (max-width: 992px) {
+  .footer-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .app-download img {
+    max-width: 140px;
+  }
+}
+
+
+
+
+
+
+

@@ -247,5 +247,24 @@
       });
     });
   </script>
+
+  <script>
+  fetch("header.html")
+    .then(res => res.text()
+    .then(html => {
+      const header = document.getElementById("header");
+      header.innerHTML = html;
+
+      // Find the "My cart" icon and bind click
+      const cartIconEl = header.querySelector(".header-icons .icon i.fa-shopping-cart");
+      if (cartIconEl) {
+        const cartBox = cartIconEl.closest(".icon");
+        cartBox.style.cursor = "pointer";
+        cartBox.addEventListener("click", () => {
+          window.location.href = "web-cart.html"; // <-- your target page
+        });
+      }
+    });
+</script>
 </body>
 </html>

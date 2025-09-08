@@ -257,6 +257,45 @@
   fetch("footer.html").then(r => r.text()).then(d => document.getElementById("footer").innerHTML = d);
 </script>
 
+<script>
+  fetch("header.html")
+    .then(res => res.text())
+    .then(html => {
+      const header = document.getElementById("header");
+      header.innerHTML = html;
+
+      // Find the "My cart" icon and bind click
+      const cartIconEl = header.querySelector(".header-icons .icon i.fa-shopping-cart");
+      if (cartIconEl) {
+        const cartBox = cartIconEl.closest(".icon");
+        cartBox.style.cursor = "pointer";
+        cartBox.addEventListener("click", () => {
+          window.location.href = "web-cart.html"; // <-- your target page
+        });
+      }
+    });
+</script>
+
+
+<script>
+  const gridBtn = document.querySelector('.view-toggle button[title="Grid view"]');
+  const listBtn = document.querySelector('.view-toggle button[title="List view"]');
+  const productGrid = document.querySelector('.product-grid');
+
+  listBtn.addEventListener('click', () => {
+    productGrid.classList.add('list-view');
+    listBtn.classList.add('active');
+    gridBtn.classList.remove('active');
+  });
+
+  gridBtn.addEventListener('click', () => {
+    productGrid.classList.remove('list-view');
+    gridBtn.classList.add('active');
+    listBtn.classList.remove('active');
+  });
+</script>
+
+
   
 </body>
 </html>

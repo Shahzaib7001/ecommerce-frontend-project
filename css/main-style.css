@@ -1299,3 +1299,313 @@ body {
     height: auto;
   }
 }
+
+
+
+
+
+
+
+/* 📱 Mobile & Tablet Responsiveness */
+
+/* Tablet view */
+@media (max-width: 992px) {
+  .main-content {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .category-list,
+  .main-banner,
+  .right-panel {
+    width: 100%;
+    height: auto;
+  }
+
+  .right-panel {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  .user-box,
+  .promo {
+    flex: 1;
+    margin: 5px 0;
+  }
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+  /* Deals section: 2 per row */
+  .deals-items {
+    grid-template-columns: repeat(2, 1fr);
+    height: auto;
+  }
+
+  /* Home & Gadgets section: 2 per row */
+  .home-items,
+  .gadgets-items {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  /* Recommended section: 2 per row */
+  .recommended-items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+}
+
+/* Extra small mobile view */
+@media (max-width: 576px) {
+  /* Deals: 1 per row */
+  .deals-items {
+    grid-template-columns: 1fr;
+  }
+
+  /* Home, Gadgets, Recommended: 1 per row */
+  .home-items,
+  .gadgets-items,
+  .recommended-items {
+    grid-template-columns: 1fr;
+  }
+
+  /* Newsletter form stacked */
+  .newsletter-form {
+    flex-direction: column;
+  }
+
+  .newsletter-form input,
+  .newsletter-form button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
+
+
+
+
+/* 📱 Mobile & Tablet Responsive Header */
+
+/* Tablet and below */
+@media (max-width: 992px) {
+  .top-header-content {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  .search-bar {
+    flex: 1 1 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .search-bar input,
+  .search-bar select,
+  .search-bar button {
+    flex: 1 1 auto;
+    min-width: 100px;
+  }
+
+  .header-icons {
+    display: flex;
+    justify-content: flex-end;
+    flex: 1 1 100%;
+    gap: 15px;
+  }
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+  /* Top header stack */
+  .top-header-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .logo {
+    margin-bottom: 10px;
+  }
+
+  .search-bar {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .search-bar input,
+  .search-bar select,
+  .search-bar button {
+    width: 100%;
+  }
+
+  .header-icons {
+    width: 100%;
+    justify-content: space-around;
+    margin-top: 10px;
+  }
+
+  /* Nav links wrap or stack */
+  .nav-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 8px;
+    margin: 10px 0;
+  }
+
+  .nav-links li {
+    width: 100%;
+  }
+
+  .lang-ship {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .ship-to {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 576px) {
+  .header-icons {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .nav-links {
+    font-size: 14px;
+  }
+
+  .search-bar input {
+    font-size: 14px;
+  }
+}
+
+
+
+/* 📱 Mobile & Tablet Responsive Footer */
+
+/* Tablet view */
+@media (max-width: 992px) {
+  .footer-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .app-download img {
+    max-width: 140px;
+  }
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+  .footer-content {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .footer-col {
+    text-align: left;
+  }
+
+  .brand-info {
+    grid-column: span 2;
+  }
+
+  .app-download {
+    grid-column: span 2;
+  }
+
+  .app-download img {
+    max-width: 120px;
+    margin: 8px 0;
+  }
+
+  .social-icons {
+    margin-top: 10px;
+  }
+
+  .social-icons a {
+    margin-right: 10px;
+  }
+
+  .footer-bottom-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}
+
+/* Extra small mobile */
+@media (max-width: 576px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-col,
+  .brand-info,
+  .app-download {
+    text-align: center;
+  }
+
+  .brand-info p {
+    margin: 10px auto;
+    max-width: 300px;
+  }
+
+  .app-download img {
+    max-width: 200px;
+    display: block;
+    margin: 10px auto;
+  }
+
+  .footer-bottom-content {
+    text-align: center;
+    align-items: center;
+  }
+
+  .language-select {
+    justify-content: center;
+  }
+}
+
+
+
+/* Prevent horizontal scroll on mobile */
+html, body {
+  overflow-x: hidden;
+}
+
+/* Make sure footer never overflows */
+.footer,
+.footer-content,
+.footer-bottom,
+.container {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* App download images responsive */
+.footer .app-download img {
+  max-width: 100%;
+  height: auto;
+}

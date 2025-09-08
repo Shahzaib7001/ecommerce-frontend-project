@@ -263,7 +263,56 @@
 <script>
   fetch("header.html").then(r => r.text()).then(d => document.getElementById("header").innerHTML = d);
   fetch("footer.html").then(r => r.text()).then(d => document.getElementById("footer").innerHTML = d);
+
 </script>
+
+<script>
+  fetch("header.html")
+    .then(res => res.text())
+    .then(html => {
+      const header = document.getElementById("header");
+      header.innerHTML = html;
+
+      // Find the "My cart" icon and bind click
+      const cartIconEl = header.querySelector(".header-icons .icon i.fa-shopping-cart");
+      if (cartIconEl) {
+        const cartBox = cartIconEl.closest(".icon");
+        cartBox.style.cursor = "pointer";
+        cartBox.addEventListener("click", () => {
+          window.location.href = "web-cart.html"; // <-- your target page
+        });
+      }
+    });
+</script>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const gridBtn = document.querySelector('.view-toggle .view-btn[title="Grid view"]');
+  const listBtn = document.querySelector('.view-toggle .view-btn[title="List view"]');
+  const productList = document.querySelector('.product-list');
+
+  // Default: list view
+  productList.classList.add("list-view");
+
+  gridBtn.addEventListener("click", () => {
+    productList.classList.remove("list-view");
+    productList.classList.add("grid-view");
+
+    gridBtn.classList.add("active");
+    listBtn.classList.remove("active");
+  });
+
+  listBtn.addEventListener("click", () => {
+    productList.classList.remove("grid-view");
+    productList.classList.add("list-view");
+
+    listBtn.classList.add("active");
+    gridBtn.classList.remove("active");
+  });
+});
+</script>
+
 
 </body>
 </html>
